@@ -1,7 +1,7 @@
-package br.com.fiap.grupo14.techchallenge.controller;
+package br.com.fiap.grupo14.techchallenge.infraestructure.adapter.in;
 
-import br.com.fiap.grupo14.techchallenge.dto.ClienteDTO;
-import br.com.fiap.grupo14.techchallenge.service.ClienteService;
+import br.com.fiap.grupo14.techchallenge.domain.model.Cliente;
+import br.com.fiap.grupo14.techchallenge.domain.port.in.ClienteService;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +21,7 @@ public class ClienteController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ClienteDTO>> findAll(
+    public ResponseEntity<Page<Cliente>> findAll(
             @RequestParam(value="page", defaultValue = "0") Integer page,
             @RequestParam(value="linesPerPage", defaultValue = LINHAS_POR_PAGINA) Integer linesPerPage,
             @RequestParam(value="orderBy", defaultValue = "id") String orderBy,

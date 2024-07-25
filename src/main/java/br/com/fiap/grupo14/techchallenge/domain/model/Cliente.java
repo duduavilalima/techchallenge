@@ -1,4 +1,4 @@
-package br.com.fiap.grupo14.techchallenge.entities;
+package br.com.fiap.grupo14.techchallenge.domain.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -35,6 +35,6 @@ public class Cliente extends BaseEntity {
     @Size(max = 14)
     @NotNull
     @Column(name = "cpf", nullable = false, length = 14)
-    private String senha;
+    private String cpf;
 
 }
